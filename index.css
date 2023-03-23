@@ -1,0 +1,52 @@
+header {
+    color: navy;
+    text-align: center;
+    font-size: 3rem;
+    padding: 3rem;
+    font-family: "Anton", sans-serif;
+}
+
+body {
+    background-color: #EBF9FA;  
+}
+
+#sky-kayak {
+    width: 25%;
+    position: absolute;right: 0px; top: 282px;
+}
+
+#cave-kayak {
+    width: 25%;
+    position: absolute;left: 0px; top: 282px;
+}
+
+section {
+    font-family: sans-serif;
+    font-size: large;
+    text-align: center;
+}
+
+.scoreboard-container {
+    width: 700px;
+    border-radius: 15px;
+    padding: 1rem;
+    box-shadow: 0 0 5px color #c3c3c3;
+    background-color: white;
+    margin: 2.2rem auto;
+}
+
+.game-container {
+    width: 45%;
+    height: 550px;
+    border-radius: 15px;
+    padding: 1rem;
+    box-shadow: 0 0 5px color #c3c3c3;
+    background-color: blue;
+    margin: 2.2rem auto; 
+    padding: 1rem;
+}
+
+th {
+    font-size:larger;
+    text-align: left;
+}
