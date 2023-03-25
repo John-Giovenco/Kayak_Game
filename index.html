@@ -5,18 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JG's Kayak Adventures</title>
     <link rel="stylesheet" href="index.css">
-        <style>
-            main {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-evenly;
-            }
-        </style>
+    <script src="move.js"></script>
+    <script src="index.js"></script>
     </head>
     <body>
         <div>
             <header>
-                JG's Kayak Extravaganza
+                Space Adventure 
             </header>
         </div>
         <div class="scoreboard-container">
@@ -36,20 +31,28 @@
             </table>
         </div>
         <div class="game-container">
+            <div id = "ship">
+                <img src="assets/playerShip1_blue.png" alt="image1" id="image1">
+            </div>
             <section>
-    
+                <div class="game">
+                    <div class="meteor1">
+                    </div>
+                    <div class="meteor2">
+                    </div>
+                    <div class="meteor3">
+                    </div>
+                    <div class="meteor4">
+                    </div>
+                    <div class="meteor5">
+                    </div>
+                </div>    
             </section>
         </div>
-        <div>
-            <img src="assets/cave-kayak.jpg" alt="Cave Kayak" id="cave-kayak">
-        </div>
-        <div>
-            <img src="assets/sky-kayak.jpg" alt="sky-kayak" id="sky-kayak">
-        </div>
+        
         <main>
 
         </main>
-        <script src="./move.js"></script>
-        <script src="./index.js"></script>
+        
     </body>
 </html>
