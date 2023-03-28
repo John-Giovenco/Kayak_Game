@@ -3,9 +3,13 @@ function setUpMeteor () {
     meteorObject.element = meteorElement
 }
 
-const 
+document.addEventListener('keydown', function(e){
+    if(e.key === 'Shift'){
+        startMove(meteorObject)
+    }
+})
 
-function moveSouth(time) {
+function moveMeteor(meteorObject) {
     direction = 'south'
     element.src = './assets/meteor1'
 }

@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JG's Kayak Adventures</title>
     <link rel="stylesheet" href="index.css">
-    <script src="move.js"></script>
     <script src="index.js"></script>
-    <script src = "meteors.js"></script>
+    <script src = "enemy.js"></script>
     </head>
     <body>
         <div>
@@ -30,25 +29,41 @@
                     </tr>
                 </thead>
             </table>
+            <button onClick="startGame()">Start!</button>
         </div>
         <div class="game-container">
             <div id = "ship">
                 <img src="assets/playerShip1_blue.png" alt="image1" id="image1">
             </div>
-            <div id = "meteor1">
-                <img src="assets/meteor1.png" alt="meteor1" id="meteor1">
+            <div id = "enemy1">
+                <img src="assets/enemy1.png" alt="enemy1">
+                    <div id="laser">
+                        <img src="assets/laser1-3-5.png" alt="blue laser" id="blue_laser">
+                    </div>
             </div>
-            <div id="meteor2">
-                <img src="assets/meteor2.png" alt="meteor2" id="meteor2">
+            <div id="enemy2">
+                <img src="assets/enemy2.png" alt="enemy2">
+                <div id="laser2">
+                    <img src="assets/laser2-4.png" alt="red laser" id="red_laser2">
+                </div>
             </div>
-            <div id = "meteor3">
-                <img src="assets/meteor3.png" alt="meteor3" id="meteor3">
+            <div id = "enemy3">
+                <img src="assets/enemy3.png" alt="enemy3">
+                <div id="laser3">
+                    <img src="assets/laser1-3-5.png" alt="blue laser" id="blue_laser3">
+                </div>
             </div>
-            <div id="meteor4">
-                <img src="assets/meteor4.png" alt="meteor4" id="meteor4">
+            <div id="enemy4">
+                <img src="assets/enemy4.png" alt="enemy4" >
+                    <div id="laser4">
+                        <img src="assets/laser2-4.png" alt="red laser" id="red_laser4">
+                    </div>
             </div>
-            <div id="meteor5">
-                <img src="assets/meteor5.png" alt="meteor5" id="meteor5">
+            <div id="enemy5">
+                <img src="assets/enemy5.png" alt="enemy5">
+                    <div id="laser5">
+                        <img src="assets/laser1-3-5.png" alt="blue laser" id="blue_laser5">
+                    </div>
             </div>
         </div>
         

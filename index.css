@@ -50,44 +50,49 @@ section {
     
 }
 
-#meteor1 {
+#enemy1 {
     position:absolute;
     left: 0;
     right: 100px;
     top: 0;
     bottom: 0;
+    width: 20%;
 }
 
-#meteor2 {
+#enemy2 {
     position:absolute;
     left: 1000;
     right: 0;
     top: 0;
     bottom: 0;
+    width: 20%;
 }
 
-#meteor3 {
+#enemy3 {
     position:absolute;
-    left: 0;
+    left: 40%;
     right: 0;
     top: 0;
     bottom: 0;
+    width: 20%;
 }
 
-#meteor4 {
+#enemy4 {
     position:absolute;
-    left: 90px;
+    left: 60%;
     right: 0;
     top: 0;
     bottom: 0;
+    width: 20%;
 }
 
-#meteor5 {
+#enemy5 {
     position:absolute;
-    left: 225px;
+    left: 20%;
     right: 0;
     top: 0;
     bottom: 0;
+    width: 20%;
 }
 
 th {
