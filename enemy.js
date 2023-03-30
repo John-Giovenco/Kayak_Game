@@ -1,35 +1,37 @@
-const enemy = document.querySelectorAll('#enemy1');
+const enemys = document.querySelectorAll('.enemy');
 const scoreBoard = document.querySelector('.score');
-const laser = document.querySelectorAll('#laser');
+const laser = document.querySelectorAll('.laser');
+let lastEnemy;
+let timeUp = false;
+let score = 0;
 
 function randomTime(min, max) {
-    return Math.round(math.random() * (max - min) + min);
+    return Math.round(Math.random() * (max - min) + min);
 }
 
-function randomEnemys(enemy) {
-    const idx = Math.floor(math.random() * enemy.length);
-    const enemy = enemy[idx];
-    if (enemy === lastenemy) {
-        return randomEnemys(enemy);
+function randomEnemy(enemys) {
+    const idx = Math.floor(Math.random() * enemys.length);
+    const enemy = enemys[idx];
+    if (enemy === lastEnemy) {
+        return randomEnemy(enemys);
     }
-    lastenemy = enemy;
+    lastEnemy = enemy;
     return enemy;
 }
 
 function shoot() {
-    const time = randomTime(100, 400);
-    const enemy = randomEnemys(enemy)
+    const time = randomTime(1000, 4000);
+    const enemy = randomEnemy(enemys);
     enemy.classList.add('shoot');
     setTimeout(() => {
-        enemy.classList.remove(shoot)
+        enemy.classList.add('down');
         if (!timeUp) move();
     }, time);
 }
 
 function startGame() {
-    scoreBoard.textContent = 0;
     timeUp = false;
-    score = time;
+    score = 0;
     shoot();
     setTimeout(() => timeUp = true, 10000)
-}
+  }

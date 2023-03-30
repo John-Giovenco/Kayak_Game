@@ -47,7 +47,7 @@ section {
 
 #ship {
     position: absolute;
-    
+    left: 50%;    
 }
 
 #enemy1 {
@@ -93,6 +93,91 @@ section {
     top: 0;
     bottom: 0;
     width: 20%;
+}
+
+:root {
+    --animation-time: 2s;
+}
+
+#laser1 {
+     position: absolute;
+     left: 9%;
+     animation: bar var(--animation-time) linear infinite;
+     animation-delay: infinite 2s;
+}
+
+@keyframes bar
+{
+  0% {
+    top: 0%;
+  }
+  100% {
+    top: 100%;;
+  }
+}
+
+#laser2 {
+    position: absolute;
+    left: 29%;
+    animation: bar var(--animation-time) linear infinite;
+}
+
+@keyframes 
+{
+  0% {
+    top: 0%;
+  }
+  100% {
+    top: 100%;;
+  }
+}
+
+#laser3 {
+    position: absolute;
+    left: 49%;
+    animation: bar var(--animation-time) linear infinite;
+}
+
+@keyframes 
+{
+  0% {
+    top: 0%;
+  }
+  100% {
+    top: 100%;;
+  }
+}
+
+#laser4 {
+    position: absolute;
+    left: 69%;
+    animation: bar var(--animation-time) linear infinite;    
+}
+
+@keyframes bar
+{
+  0% {
+    top: 0%;
+  }
+  100% {
+    top: 100%;;
+  }
+}
+
+#laser5 {
+    position: absolute;
+    left: 89%;
+    animation: bar var(--animation-time) linear infinite;
+}
+
+@keyframes bar
+{
+  0% {
+    top: 0%;
+  }
+  100% {
+    top: 100%;;
+  }
 }
 
 th {

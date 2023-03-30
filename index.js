@@ -71,3 +71,5 @@ function main (){
 document.addEventListener('DOMContentLoaded', function (){
     main ()
 })
+
+$('.x-position').addClass('slide-in');
