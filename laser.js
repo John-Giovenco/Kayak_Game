@@ -1,5 +1,3 @@
-const firstLaser = ('')
-
 function setUpLaser () {
     let laserElement = document.querySelector('.laser')
     laserObject.element = laserElement
@@ -7,12 +5,6 @@ function setUpLaser () {
 
 document.addEventListener('keydown', function(e){
     if(e.key === 'Shift'){
-        startShooting(laserObject)
+        delayAnimation(laserObject)
     }
 })
-
-function shootLaser() {
-    direction = 'south';
-    setTimeout = randomTime;
-    
-}

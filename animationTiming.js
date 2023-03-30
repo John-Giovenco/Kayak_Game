@@ -1,14 +1,45 @@
-var laser1 = document.querySelector('#laser1');
+function newNonPlayableCharacter(x, y) {
+    let element = newImage('.laser')
+    element.style.zIndex = 1;
+    
+    let direction = null;
 
-laser1.addEventListener()
+    function moveCharacter() {
+        if (direction === 'south') {
+            y -= 1
+        }
+        element.style.left = x + 'px'
+        element.style.bottom = y + 'px'
+    }
 
-function setProperty(duration) {
-  laser1.style.setProperty('--animation-time', animationDuration +'s');
+    setInterval(moveCharacter, 1)
+
+    async function walkSouth(time) {
+        direction = 'south'
+        element.src = `./assets/red-character/south.gif`
+        await sleep(time)
+        stop()
+    }
+
+    async function stop() {
+        direction = null
+        element.src = ``
+        await sleep(time)
+        stop()
+    }
+
+    return {
+        walkSouth: walkSouth,
+        stop: stop
+    }
 }
 
-function changeAnimationTime() {
-  var animationDuration = Math.random();
-  setProperty(animationDuration);
+function sleep(time){
+    return new Promise(resolve => {
+        setTimeout(resolve, time)
+    }) 
 }
 
-setInterval(changeAnimationTime, 1000);
+document.addEventListener('DOMContentLoaded', function (){
+    main ()
+})

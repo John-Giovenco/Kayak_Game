@@ -10,12 +10,10 @@ body {
     background-color: #EBF9FA;  
 }
 
-#sky-kayak {
-    width: 25%;
-    position: absolute;right: 0px; top: 282px;
+th {
+    font-size:larger;
+    text-align: left;
 }
-
-
 
 section {
     font-family: sans-serif;
@@ -96,81 +94,41 @@ section {
 }
 
 :root {
-    --animation-time: 2s;
+    animation-delay: 200ms;
 }
 
 #laser1 {
      position: absolute;
      left: 9%;
-     animation: bar var(--animation-time) linear infinite;
-     animation-delay: infinite 2s;
-}
-
-@keyframes bar
-{
-  0% {
-    top: 0%;
-  }
-  100% {
-    top: 100%;;
-  }
+     /*animation: move 5s infinite linear;
+     animation-delay: var(--animation-time);*/
 }
 
 #laser2 {
     position: absolute;
     left: 29%;
-    animation: bar var(--animation-time) linear infinite;
-}
-
-@keyframes 
-{
-  0% {
-    top: 0%;
-  }
-  100% {
-    top: 100%;;
-  }
+    animation: move 5s infinite linear;
 }
 
 #laser3 {
     position: absolute;
     left: 49%;
-    animation: bar var(--animation-time) linear infinite;
-}
-
-@keyframes 
-{
-  0% {
-    top: 0%;
-  }
-  100% {
-    top: 100%;;
-  }
+    animation: move 5s infinite linear;
 }
 
 #laser4 {
     position: absolute;
     left: 69%;
-    animation: bar var(--animation-time) linear infinite;    
-}
-
-@keyframes bar
-{
-  0% {
-    top: 0%;
-  }
-  100% {
-    top: 100%;;
-  }
+    animation: move 5s infinite linear;    
 }
 
 #laser5 {
     position: absolute;
     left: 89%;
-    animation: bar var(--animation-time) linear infinite;
+    animation: move 5s infinite linear;
 }
 
-@keyframes bar
+@keyframes move
 {
   0% {
     top: 0%;
@@ -180,7 +138,19 @@ section {
   }
 }
 
-th {
-    font-size:larger;
-    text-align: left;
-}
+@keyframes pause-between-iterations {
+    /* Other animation is visible for 25% of the time */
+    0% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 1;
+    }
+    /* Other animation is hidden for 75% of the time */
+    25.1% {
+      opacity: 0;	
+    }
+    100% {
+      opacity: 0;
+    }
+  }
