@@ -92,7 +92,7 @@ section {
     bottom: 0;
     width: 20%;
 }
-
+/*
 :root {
     animation-delay: 200ms;
 }
@@ -101,7 +101,7 @@ section {
      position: absolute;
      left: 9%;
      /*animation: move 5s infinite linear;
-     animation-delay: var(--animation-time);*/
+     animation-delay: var(--animation-time);
 }
 
 #laser2 {
@@ -139,14 +139,14 @@ section {
 }
 
 @keyframes pause-between-iterations {
-    /* Other animation is visible for 25% of the time */
+ 
     0% {
       opacity: 1;
     }
     25% {
       opacity: 1;
     }
-    /* Other animation is hidden for 75% of the time */
+
     25.1% {
       opacity: 0;	
     }
@@ -154,3 +154,4 @@ section {
       opacity: 0;
     }
   }
+*/

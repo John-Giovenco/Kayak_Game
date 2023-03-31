@@ -1,12 +1,6 @@
-// Create a non-playable character
-const lon = laserOne(150, 800);
+const lon = laserOne (750, 800);
 
-// have the NPC start walking east immediately
-function moveLON(){
-    
-    lon.walkSouth(1500)
-    
+function moveLon(){
+    lon.shootSouth(2500)   
 }
-moveLON()
-
-// Create the inventory
+moveLon()
