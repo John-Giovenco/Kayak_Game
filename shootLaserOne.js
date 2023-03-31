@@ -1,10 +1,11 @@
-function shootLaserDown(x, y) {
+function laserOne(x, y) {
     let element = newImage('./asset/laser.png')
     element.style.zIndex = 1;
     
     let direction = null;
 
-    function shootLaser() {
+    function moveLaserOne() {
+        
         if (direction === 'south') {
             y -= 1
         }
@@ -12,9 +13,9 @@ function shootLaserDown(x, y) {
         element.style.bottom = y + 'px'
     }
 
-    setInterval(shootLaser, 1)
+    setInterval(moveLaserOne, 1)
 
-    async function shootAgain(time) {
+    async function walkSouth(time) {
         direction = 'south'
         element.src = `./assets/laser.png`
         await sleep(time)
@@ -29,8 +30,8 @@ function shootLaserDown(x, y) {
     }
 
     return {
-        element: element
-        shootSouth: shootSouth,
+        element: element,
+        walkSouth: walkSouth,
         stop: stop
     }
 }
