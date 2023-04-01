@@ -1,6 +1,6 @@
-const lth = laserThree(790, 500);
+const lth = laserThree(875, 420);
 
 function moveLth(){
-    moveLth.shootSouth()
+    lth.shootSouth()
 }
 moveLth()

@@ -1,4 +1,4 @@
-const lon = laserOne(590, 500);
+const lon = laserOne(590, 420);
 
 function moveLon(){
     lon.shootSouth()
