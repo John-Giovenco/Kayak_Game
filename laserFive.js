@@ -1,4 +1,4 @@
-const lfi = laserFive(300, 420);
+const lfi = laserFive(1300, 440);
 
 function moveLfi(){
     lfi.shootSouth()

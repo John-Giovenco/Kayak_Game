@@ -1,4 +1,4 @@
-const lfo = laserFour(1010, 420);
+const lfo = laserFour(1130, 440);
 
 function moveLfo(){
     lfo.shootSouth()
