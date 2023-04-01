@@ -1,7 +1,6 @@
 function laserTwo(x, y) {
     let element = newImage('assets/laser.png')
     element.style.zIndex = 1;
-    time = (Math.random)
     
     let direction = null;
 
@@ -19,7 +18,15 @@ function laserTwo(x, y) {
     function shootSouth(time) {
         direction = 'south'
         element.src = `./assets/laser.png`
-        s
+        sleep(time)
+        stop()
+    }
+
+    function stop() {
+        direction = null
+        element.src = `./assets/laser.png`
+        sleep(time)
+        stop()
     }
 
     return {

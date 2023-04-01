@@ -1,4 +1,4 @@
-const ltw = laserTwo(650, 500)
+const ltw = laserTwo(750, 500);
 
 function moveltw(){
     ltw.shootSouth()
