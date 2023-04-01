@@ -4,7 +4,7 @@ function laserTwo(x, y) {
     
     let direction = null;
 
-    function shootLaser() {
+    function laserTwo() {
         
         if (direction === 'south') {
             y -= 1
@@ -13,7 +13,7 @@ function laserTwo(x, y) {
         element.style.bottom = y + 'px'
     }
 
-    setInterval(shootLaser, 1)
+    setInterval(laserTwo, 1)
     
     function shootSouth(time) {
         direction = 'south'
