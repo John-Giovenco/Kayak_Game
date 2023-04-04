@@ -24,7 +24,7 @@ function laserOne(x, y) {
     async function shootSouth(time) {   
         direction = 'south'
         element.src = `./assets/laser.png`
-        await sleep(time)
+        await sleep()
         stop()
     }
 

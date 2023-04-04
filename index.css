@@ -1,4 +1,79 @@
-header {
+html {
+    box-sizing: border-box;
+    font-size: 10px;
+    background: radial-gradient(circle at bottom, navy 0, black 100%);
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Amatic SC', cursive;    
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 10rem;
+    line-height: 1;
+    margin-bottom: 0;
+    font: ;
+  }
+  
+  .score {
+    background: rgba(255,255,255,0.2);
+    padding: 0 3rem;
+    line-height: 1;
+    border-radius: 1rem;
+  }
+  
+  .game {
+    width: 600px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+  
+  .meteor {
+    flex: 1 0 33.33%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .meteor:after {
+    display: block;
+    background: url(asteroid-asteroid-svgrepo-com.svg) bottom center no-repeat;
+    background-size: contain;
+    content: '';
+    width: 100%;
+    height:70px;
+    position: absolute;
+    z-index: 2;
+    bottom: -30px;
+  }
+  
+  .alien {
+    background: url('alien-svgrepo-com.svg') bottom center no-repeat;
+    background-size: 60%;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    transition:all 0.4s;
+  }
+  
+  .meteor.up .alien {
+    top: 0;
+  }
+  
+
+
+/*header {
     color: black;
     text-align: center;
     font-size: 3rem;
@@ -155,47 +230,78 @@ section {
     width: 10%;
 }
 
-#laser6 {
-    position:absolute;
-    left: 94.25%;
-    right: 0;
-    top: 13%;
-    bottom: 0;
-}
-/*
 :root {
-    animation-delay: 200ms;
+    
 }
 
 #laser1 {
      position: absolute;
-     left: 9%;
-     /*animation: move 5s infinite linear;
-     animation-delay: var(--animation-time);
+     left: 4.25%;
+     animation: move 3s infinite linear;
+     animation-delay: 3s;
 }
 
 #laser2 {
     position: absolute;
-    left: 29%;
-    animation: move 5s infinite linear;
+    left: 14.25%;
+    animation: move 3s infinite linear;
+    animation-delay: 5s;
 }
 
 #laser3 {
     position: absolute;
-    left: 49%;
-    animation: move 5s infinite linear;
+    left: 24.25%;
+    animation: move 3s infinite linear;
+    animation-delay: 3s;
 }
 
 #laser4 {
     position: absolute;
-    left: 69%;
-    animation: move 5s infinite linear;    
+    left: 34.25%;
+    animation: move 3s infinite linear;  
+    animation-delay: 5s;  
 }
 
-#laser5 {
+#laser6 {
     position: absolute;
-    left: 89%;
-    animation: move 5s infinite linear;
+    left: 44.25%;
+    animation: move 3s infinite linear;
+    animation-delay: 3s;
+}
+
+#laser7 {
+    position: absolute;
+    left: 54.25%;
+    animation: move 3s infinite linear;
+    animation-delay: 5s;
+}
+
+#laser8 {
+    position: absolute;
+    left: 64.25%;
+    animation: move 3s infinite linear;
+    animation-delay: 3s;
+}
+
+#laser9 {
+    position: absolute;
+    left: 74.25%;
+    animation: move 3s infinite linear;
+    animation-delay: 5s;
+}
+
+#laser10 {
+    position: absolute;
+    left: 84.25%;
+    animation: move 3s infinite linear;
+    animation-delay: 3s;
+}
+
+#laser11 {
+    position: absolute;
+    left: 94.25%;
+    animation: move 3s infinite linear;
+    animation-delay: 5s;
 }
 
 @keyframes move
@@ -223,5 +329,4 @@ section {
     100% {
       opacity: 0;
     }
-  }
-*/
+  }*/

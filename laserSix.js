@@ -1,4 +1,4 @@
-const lsi = laserSix();
+const lsi = laserSix;
 
 async function moveLsi(){
     await lsi.shootSouth()
