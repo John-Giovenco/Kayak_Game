@@ -14,18 +14,24 @@ function laserFour(x, y) {
     }
 
     setInterval(laserFour, 1)
+
+    function sleep(time){
+        return new Promise(resolve, function (time) {
+                setTimeout(resolve, time);
+            })
+        }
     
-    function shootSouth(time) {
+    async function shootSouth(time) {
         direction = 'south'
         element.src = `./assets/laser.png`
-        sleep(time)
+        await sleep(time)
         stop()
     }
 
-    function stop() {
+    async function stop() {
         direction = null
         element.src = `./assets/laser.png`
-        sleep(time)
+        await sleep(time)
         stop()
     }
 
@@ -34,4 +40,10 @@ function laserFour(x, y) {
         shootSouth: shootSouth,
         stop: stop,
     }
+}
+
+function sleep(time){
+    return new Promise(resolve => {
+        setTimeout(resolve, time)
+    }) 
 }

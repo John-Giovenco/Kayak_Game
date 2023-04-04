@@ -30,7 +30,17 @@ section {
     margin: 2.2rem auto;
 }
 
-.game-container {
+#seconds {
+    font-size: 3em;}
+  
+#minutes {
+    font-size: 3em;
+}
+#colon {
+    font-size: 3em;
+}
+
+.canvas {
     width: 45%;
     height: 550px;
     border-radius: 15px;
@@ -45,7 +55,8 @@ section {
 
 #ship {
     position: absolute;
-    left: 50%;    
+    left: 300px; 
+    bottom: 60px;
 }
 
 #enemy1 {

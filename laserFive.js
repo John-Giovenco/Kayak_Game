@@ -1,6 +1,7 @@
 const lfi = laserFive(1300, 440);
 
-function moveLfi(){
-    lfi.shootSouth()
-}
-moveLfi()
+    async function moveLfi(){
+        await lfi.shootSouth()
+    }
+    moveLfi()
+    
