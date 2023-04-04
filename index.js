@@ -1,3 +1,4 @@
+/* using wack-a-mole from github base as a guide for javascript code*/
 let meteors = document.querySelectorAll('.meteor');
 let scoreBoard = document.querySelector('.score');
 let aliens = document.querySelectorAll('.alien');
