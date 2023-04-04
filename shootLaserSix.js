@@ -1,10 +1,15 @@
-function laserOne(x, y) {
-    let element = newImage('assets/laser.png')
+function setUpLaser () {
+    let laserElement = document.querySelector('#laser6')
+    laserObject.element = laserElement
+}
+
+function shootLaserSix(x, y) {
+    let element = document.selectElementById('#laser6');
     element.style.zIndex = 1;
     
     let direction = null;
 
-    function laserOne() {
+    function shootLaser(laserObject) {
         
         if (direction === 'south') {
             y -= 1
@@ -13,7 +18,7 @@ function laserOne(x, y) {
         element.style.bottom = y + 'px'
     }
 
-    setInterval(laserOne, 1)
+    setInterval(shootLaser, 1)
     
     function sleep(){
     return new Promise(resolve, function (time) {
@@ -23,14 +28,14 @@ function laserOne(x, y) {
 
     async function shootSouth(time) {   
         direction = 'south'
-        element.src = `./assets/laser.png`
+        element.src = `./assets/laser6.png`
         await sleep(time)
         stop()
     }
 
     async function stop() {
         direction = null
-        element.src = `./assets/laser.png`
+        element.src = `./assets/laser6.png`
         await sleep(time)
         stop()
     }

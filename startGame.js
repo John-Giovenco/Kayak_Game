@@ -3,6 +3,9 @@ const ltw = laserTwo(775, 440);
 const lth = laserThree(950, 440);
 const lfo = laserFour(1130, 440);
 const lfi = laserFive(1300, 440);
+var minutesLabel = document.getElementById("minutes");
+var secondsLabel = document.getElementById("seconds");
+var totalSeconds = 0;
 
 document.body.onkeyup = function(e) {
     if (e.key == " " ||
@@ -12,22 +15,43 @@ document.body.onkeyup = function(e) {
         async function moveLon(){
             await lon.shootSouth()
         }
-            moveLon();
+         moveLon();
         }
         async function moveLtw(){
             await ltw.shootSouth()
         }
-        moveLtw()
+        moveLtw();
         async function moveLth(){
             await lth.shootSouth()
         }
-        moveLth()
+        moveLth();
         function moveLfo(){
             lfo.shootSouth()
         }
-        moveLfo()
+        moveLfo();
         async function moveLfi(){
             await lfi.shootSouth()
         }
-        moveLfi()
+        moveLfi();
+        
+        setInterval(setTime, 1000);
+
+        function setTime()
+        {
+            ++totalSeconds;
+            secondsLabel.innerHTML = pad(totalSeconds%60);
+            minutesLabel.innerHTML = pad(parseInt(totalSeconds/60));
+        }
+        function pad(val)
+        {
+            var valString = val + "";
+            if(valString.length < 2)
+            {
+                return "0" + valString;
+            }
+            else
+            {
+                return valString;
+            }
+        }
 }

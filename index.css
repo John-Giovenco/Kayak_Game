@@ -1,5 +1,5 @@
 header {
-    color: navy;
+    color: black;
     text-align: center;
     font-size: 3rem;
     padding: 3rem;
@@ -71,43 +71,96 @@ section {
     right: 100px;
     top: 0;
     bottom: 0;
-    width: 20%;
+    width: 10%;
 }
 
 #enemy2 {
     position:absolute;
-    left: 1000;
+    left: 10%;
     right: 0;
     top: 0;
     bottom: 0;
-    width: 20%;
+    width: 10%;
 }
 
 #enemy3 {
-    position:absolute;
-    left: 40%;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 20%;
-}
-
-#enemy4 {
-    position:absolute;
-    left: 60%;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 20%;
-}
-
-#enemy5 {
     position:absolute;
     left: 20%;
     right: 0;
     top: 0;
     bottom: 0;
-    width: 20%;
+    width: 10%;
+}
+
+#enemy4 {
+    position:absolute;
+    left: 30%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 10%;
+}
+
+#enemy5 {
+    position:absolute;
+    left: 40%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 10%;
+}
+
+#enemy6 {
+    position:absolute;
+    left: 50%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 10%;
+}
+
+#enemy7 {
+    position:absolute;
+    left: 60%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 10%;
+}
+
+#enemy8 {
+    position:absolute;
+    left: 70%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 10%;
+}
+
+#enemy9 {
+    position:absolute;
+    left: 80%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 10%;
+}
+
+#enemy10 {
+    position:absolute;
+    left: 90%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 10%;
+}
+
+#laser6 {
+    position:absolute;
+    left: 94.25%;
+    right: 0;
+    top: 13%;
+    bottom: 0;
 }
 /*
 :root {
