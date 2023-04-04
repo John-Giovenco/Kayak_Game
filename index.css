@@ -9,6 +9,11 @@ html {
   *, *:before, *:after {
     box-sizing: inherit;
   }
+
+  #button {
+    text-align: center;
+    
+  }
   
   body {
     padding: 0;
@@ -21,7 +26,7 @@ html {
     font-size: 10rem;
     line-height: 1;
     margin-bottom: 0;
-    font: ;
+    color: plum;
   }
   
   .score {
@@ -58,7 +63,7 @@ html {
   }
   
   .alien {
-    background: url('alien-svgrepo-com.svg') bottom center no-repeat;
+    background: url('laurent_little_green_alien.svg') bottom center no-repeat;
     background-size: 60%;
     position: absolute;
     top: 100%;
@@ -70,238 +75,27 @@ html {
   .meteor.up .alien {
     top: 0;
   }
-  
-
-
-/*header {
-    color: black;
-    text-align: center;
-    font-size: 3rem;
-    padding: 3rem;
-    font-family: "Anton", sans-serif;
-}
-
-body {
-    background-color: #EBF9FA;  
-}
-
-th {
-    font-size: x-large;
-    text-align: left;
-}
-
-section {
-    font-family: sans-serif;
-    font-size: large;
-    text-align: center;
-}
-
-.scoreboard-container {
-    width: 700px;
-    border-radius: 15px;
-    padding: 1rem;
-    box-shadow: 0 0 5px color #c3c3c3;
-    background-color: white;
-    margin: 2.2rem auto;
-}
-
-#milliseconds {
-    font-size: 3em;
-}
-
-#seconds {
-    font-size: 3em;
-}
-  
-#minutes {
-    font-size: 3em;
-}
-
-#colon {
-    font-size: 3em;
-}
-
-.canvas {
-    width: 45%;
-    height: 550px;
-    border-radius: 15px;
-    padding: 1rem;
-    box-shadow: 0 0 5px color #c3c3c3;
-    background-color: black;
-    margin: 2.2rem auto; 
-    padding: 1rem;
-    position:relative;
-    overflow: hidden;
-}
-
-#ship {
-    position: absolute;
-    left: 300px; 
-    bottom: 60px;
-}
-
-#enemy1 {
-    position:absolute;
-    left: 0;
-    right: 100px;
-    top: 0;
-    bottom: 0;
-    width: 10%;
-}
-
-#enemy2 {
-    position:absolute;
-    left: 10%;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 10%;
-}
-
-#enemy3 {
-    position:absolute;
-    left: 20%;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 10%;
-}
 
 #enemy4 {
-    position:absolute;
-    left: 30%;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 10%;
-}
-
-#enemy5 {
-    position:absolute;
-    left: 40%;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 10%;
-}
-
-#enemy6 {
-    position:absolute;
-    left: 50%;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 10%;
-}
-
-#enemy7 {
-    position:absolute;
-    left: 60%;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 10%;
-}
-
-#enemy8 {
-    position:absolute;
-    left: 70%;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 10%;
-}
-
-#enemy9 {
     position:absolute;
     left: 80%;
     right: 0;
     top: 0;
     bottom: 0;
     width: 10%;
+    animation: move 10s infinite linear;
+    animation-delay: 2s;
 }
 
-#enemy10 {
+#enemy5 {
     position:absolute;
-    left: 90%;
+    left: 10%;
     right: 0;
     top: 0;
     bottom: 0;
     width: 10%;
-}
-
-:root {
-    
-}
-
-#laser1 {
-     position: absolute;
-     left: 4.25%;
-     animation: move 3s infinite linear;
-     animation-delay: 3s;
-}
-
-#laser2 {
-    position: absolute;
-    left: 14.25%;
-    animation: move 3s infinite linear;
-    animation-delay: 5s;
-}
-
-#laser3 {
-    position: absolute;
-    left: 24.25%;
-    animation: move 3s infinite linear;
-    animation-delay: 3s;
-}
-
-#laser4 {
-    position: absolute;
-    left: 34.25%;
-    animation: move 3s infinite linear;  
-    animation-delay: 5s;  
-}
-
-#laser6 {
-    position: absolute;
-    left: 44.25%;
-    animation: move 3s infinite linear;
-    animation-delay: 3s;
-}
-
-#laser7 {
-    position: absolute;
-    left: 54.25%;
-    animation: move 3s infinite linear;
-    animation-delay: 5s;
-}
-
-#laser8 {
-    position: absolute;
-    left: 64.25%;
-    animation: move 3s infinite linear;
-    animation-delay: 3s;
-}
-
-#laser9 {
-    position: absolute;
-    left: 74.25%;
-    animation: move 3s infinite linear;
-    animation-delay: 5s;
-}
-
-#laser10 {
-    position: absolute;
-    left: 84.25%;
-    animation: move 3s infinite linear;
-    animation-delay: 3s;
-}
-
-#laser11 {
-    position: absolute;
-    left: 94.25%;
-    animation: move 3s infinite linear;
-    animation-delay: 5s;
+    animation: move 10s infinite linear;
+    animation-delay: 2s;
 }
 
 @keyframes move
@@ -329,4 +123,4 @@ section {
     100% {
       opacity: 0;
     }
-  }*/
+  }

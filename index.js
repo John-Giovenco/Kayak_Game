@@ -1,6 +1,6 @@
-const meteors = document.querySelectorAll('.meteor');
-const scoreBoard = document.querySelector('.score');
-const aliens = document.querySelectorAll('.alien');
+let meteors = document.querySelectorAll('.meteor');
+let scoreBoard = document.querySelector('.score');
+let aliens = document.querySelectorAll('.alien');
 let lastMeteor;
 let timeUp = false;
 let score = 0;
@@ -10,8 +10,8 @@ function randomTime(min, max) {
 }
 
 function randomMeteor(meteors) {
-  const idx = Math.floor(Math.random() * meteors.length);
-  const meteor = meteors[idx];
+  let idx = Math.floor(Math.random() * meteors.length);
+  let meteor = meteors[idx];
   if (meteor === lastMeteor) {
     console.log('Can not have 2 in a row');
     return randomMeteor(meteors);
@@ -21,8 +21,8 @@ function randomMeteor(meteors) {
 }
 
 function suprise() {
-  const time = randomTime(200, 1000);
-  const meteor = randomMeteor(meteors);
+  let time = randomTime(200, 1000);
+  let meteor = randomMeteor(meteors);
   meteor.classList.add('up');
   setTimeout(() => {
     meteor.classList.remove('up');
@@ -35,7 +35,7 @@ function startGame() {
   timeUp = false;
   score = 0;
   suprise();
-  setTimeout(() => timeUp = true, 10000)
+  setTimeout(() => timeUp = true, 15000)
 }
 
 function bonk(e) {
@@ -47,16 +47,16 @@ function bonk(e) {
 
 aliens.forEach(alien => alien.addEventListener('click', bonk));
 
-/*const KEY_UP = 38;
-const KEY_DOWN = 40;
-const KEY_RIGHT = 39;
-const KEY_LEFT = 37;
-const KEY_SPACE = 32;
+/*let KEY_UP = 38;
+let KEY_DOWN = 40;
+let KEY_RIGHT = 39;
+let KEY_LEFT = 37;
+let KEY_SPACE = 32;
 
-const GAME_WIDTH = 800;
-const GAME_HEIGHT = 600;
+let GAME_WIDTH = 800;
+let GAME_HEIGHT = 600;
 
-const STATE = {
+let STATE = {
   x_pos : 0,
   y_pos : 0,
   move_right: false,
@@ -104,23 +104,23 @@ function collideRect(rect1, rect2){
 
 // Enemy 
 function createEnemy($container, x, y){
-  const $enemy = document.createElement("img");
+  let $enemy = document.createElement("img");
   $enemy.src = "img/ufo.png";
   $enemy.className = "enemy";
   $container.appendChild($enemy);
-  const enemy_cooldown = Math.floor(Math.random()*100);
-  const enemy = {x, y, $enemy, enemy_cooldown}
+  let enemy_cooldown = Math.floor(Math.random()*100);
+  let enemy = {x, y, $enemy, enemy_cooldown}
   STATE.enemies.push(enemy);
   setSize($enemy, STATE.enemy_width);
   setPosition($enemy, x, y)
 }
 
 function updateEnemies($container){
-  const dx = Math.sin(Date.now()/1000)*40;
-  const dy = Math.cos(Date.now()/1000)*30;
-  const enemies = STATE.enemies;
+  let dx = Math.sin(Date.now()/1000)*40;
+  let dy = Math.cos(Date.now()/1000)*30;
+  let enemies = STATE.enemies;
   for (let i = 0; i < enemies.length; i++){
-    const enemy = enemies[i];
+    let enemy = enemies[i];
     var a = enemy.x + dx;
     var b = enemy.y + dy;
     setPosition(enemy.$enemy, a, b);
@@ -137,7 +137,7 @@ function updateEnemies($container){
 function createPlayer($container) {
   STATE.x_pos = GAME_WIDTH / 2;
   STATE.y_pos = GAME_HEIGHT - 50;
-  const $player = document.createElement("img");
+  let $player = document.createElement("img");
   $player.src = "img/spaceship.png";
   $player.className = "player";
   $container.appendChild($player);
@@ -154,7 +154,7 @@ function updatePlayer(){
     createLaser($container, STATE.x_pos - STATE.spaceship_width/2, STATE.y_pos);
     STATE.cooldown = 30;
   }
-  const $player = document.querySelector(".player");
+  let $player = document.querySelector(".player");
   setPosition($player, bound(STATE.x_pos), STATE.y_pos-10);
   if(STATE.cooldown > 0){
     STATE.cooldown -= 0.5;
@@ -163,32 +163,32 @@ function updatePlayer(){
 
 // Player Laser
 function createLaser($container, x, y){
-  const $laser = document.createElement("img");
+  let $laser = document.createElement("img");
   $laser.src = "img/laser.png";
   $laser.className = "laser";
   $container.appendChild($laser);
-  const laser = {x, y, $laser};
+  let laser = {x, y, $laser};
   STATE.lasers.push(laser);
   setPosition($laser, x, y);
 }
 
 function updateLaser($container){
-  const lasers = STATE.lasers;
+  let lasers = STATE.lasers;
   for(let i = 0; i < lasers.length; i++){
-    const laser = lasers[i];
+    let laser = lasers[i];
     laser.y -= 2;
     if (laser.y < 0){
       deleteLaser(lasers, laser, laser.$laser);
     }
     setPosition(laser.$laser, laser.x, laser.y);
-    const laser_rectangle = laser.$laser.getBoundingClientRect();
-    const enemies = STATE.enemies;
+    let laser_rectangle = laser.$laser.getBoundingClientRect();
+    let enemies = STATE.enemies;
     for(let j = 0; j < enemies.length; j++){
-      const enemy = enemies[j];
-      const enemy_rectangle = enemy.$enemy.getBoundingClientRect();
+      let enemy = enemies[j];
+      let enemy_rectangle = enemy.$enemy.getBoundingClientRect();
       if(collideRect(enemy_rectangle, laser_rectangle)){
         deleteLaser(lasers, laser, laser.$laser);
-        const index = enemies.indexOf(enemy);
+        let index = enemies.indexOf(enemy);
         enemies.splice(index,1);
         $container.removeChild(enemy.$enemy);
       }
@@ -198,25 +198,25 @@ function updateLaser($container){
 
 // Enemy Laser
 function createEnemyLaser($container, x, y){
-  const $enemyLaser = document.createElement("img");
+  let $enemyLaser = document.createElement("img");
   $enemyLaser.src = "img/enemyLaser.png";
   $enemyLaser.className = "enemyLaser";
   $container.appendChild($enemyLaser);
-  const enemyLaser = {x, y, $enemyLaser};
+  let enemyLaser = {x, y, $enemyLaser};
   STATE.enemyLasers.push(enemyLaser);
   setPosition($enemyLaser, x, y);
 }
 
 function updateEnemyLaser($container){
-  const enemyLasers = STATE.enemyLasers;
+  let enemyLasers = STATE.enemyLasers;
   for(let i = 0; i < enemyLasers.length; i++){
-    const enemyLaser = enemyLasers[i];
+    let enemyLaser = enemyLasers[i];
     enemyLaser.y += 2;
     if (enemyLaser.y > GAME_HEIGHT-30){
       deleteLaser(enemyLasers, enemyLaser, enemyLaser.$enemyLaser);
     }
-    const enemyLaser_rectangle = enemyLaser.$enemyLaser.getBoundingClientRect();
-    const spaceship_rectangle = document.querySelector(".player").getBoundingClientRect();
+    let enemyLaser_rectangle = enemyLaser.$enemyLaser.getBoundingClientRect();
+    let spaceship_rectangle = document.querySelector(".player").getBoundingClientRect();
     if(collideRect(spaceship_rectangle, enemyLaser_rectangle)){
       STATE.gameOver = true;
     }
@@ -226,7 +226,7 @@ function updateEnemyLaser($container){
 
 // Delete Laser
 function deleteLaser(lasers, laser, $laser){
-  const index = lasers.indexOf(laser);
+  let index = lasers.indexOf(laser);
   lasers.splice(index,1);
   $container.removeChild($laser);
 }
@@ -277,7 +277,7 @@ function createEnemies($container) {
 }
 
 // Initialize the Game
-const $container = document.querySelector(".main");
+let $container = document.querySelector(".main");
 createPlayer($container);
 createEnemies($container);
 
