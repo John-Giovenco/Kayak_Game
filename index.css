@@ -11,7 +11,7 @@ body {
 }
 
 th {
-    font-size:larger;
+    font-size: x-large;
     text-align: left;
 }
 
@@ -30,12 +30,18 @@ section {
     margin: 2.2rem auto;
 }
 
+#milliseconds {
+    font-size: 3em;
+}
+
 #seconds {
-    font-size: 3em;}
+    font-size: 3em;
+}
   
 #minutes {
     font-size: 3em;
 }
+
 #colon {
     font-size: 3em;
 }

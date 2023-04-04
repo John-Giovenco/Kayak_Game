@@ -5,18 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JG's Kayak Adventures</title>
     <link rel="stylesheet" href="index.css">
-    <script src="moveShip.js"></script>
-    <script src="shootLaserOne.js"></script>
-    <script src="newImage.js"></script>
-    <script src="index.js"></script>
-    <script src="laserTwo.js"></script>
-    <script src="shootLaserTwo.js"></script>
-    <script src="laserThree.js"></script>
-    <script src="shootLaserThree.js"></script>
-    <script src="lfo.js"></script>
-    <script src="shootLaserFour.js"></script>
-    <script src="lfi.js"></script>
-    <script src="shootLaserFive.js"></script>
     </head>
     <body>
         <div>
@@ -38,32 +26,8 @@
                                 <label id="minutes">00</label>
                                 <label id="colon">:</label>
                                 <label id="seconds">00</label>
-                                <script type="text/javascript">
-                                var minutesLabel = document.getElementById("minutes");
-                                var secondsLabel = document.getElementById("seconds");
-                                var totalSeconds = 0;
-                                setInterval(setTime, 1000);
-
-                                function setTime()
-                                {
-                                    ++totalSeconds;
-                                    secondsLabel.innerHTML = pad(totalSeconds%60);
-                                    minutesLabel.innerHTML = pad(parseInt(totalSeconds/60));
-                                }
-
-                                function pad(val)
-                                {
-                                    var valString = val + "";
-                                    if(valString.length < 2)
-                                    {
-                                        return "0" + valString;
-                                    }
-                                    else
-                                    {
-                                        return valString;
-                                    }
-                                }
-                                </script>
+                                <label id="milliseconds"></label>
+                                <script src="imer.js"></script>
                             </th>
                     </tr>
                 </thead>
@@ -89,26 +53,21 @@
                     <img src="assets/enemy5.png" alt="enemy5" id="enemy5">
                 </div>
                 <div id="laser">
-                    <script src="laserOne.js"></script>
                     <img src="assets/laser.png" alt="laser" id="laser1">
                 </div>
-        </div>
-        
+                
+        </div>      
         <main>
 
         </main>
-                <script src="moveShip.js"></script>
-                
-                <script src="shootLaserOne.js"></script>
-                <script src="newImage.js"></script>
-                <script src="ltw.js"></script>
-                <script src="lth.js"></script>
-                <script src="shootLaserThree.js"></script>
-                <script src="shootLaserTwo.js"></script>
-                <script src="newImage.js"></script>
-                <script src="laserFour.js"></script>
-                <script src="shootLaserFour.js"></script>
-                <script src="laserFive.js"></script>
-                <script src="shootLaserFive.js"></script>
+        <script src="moveShip.js"></script>
+        <script src="shootLaserOne.js"></script>
+        <script src="shootLaserThree.js"></script>
+        <script src="shootLaserTwo.js"></script>
+        <script src="shootLaserFour.js"></script>
+        <script src="shootLaserFive.js"></script>
+        <script src="newImage.js"></script>
+        <script src="startGame.js"></script>
+
     </body>
 </html>
